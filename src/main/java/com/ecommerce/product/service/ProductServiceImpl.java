@@ -40,7 +40,7 @@ public class ProductServiceImpl implements ProductService {
 	@Transactional
 	public Product getProductById(Long id) throws ProductNotFoundException {
 		Optional<Product> optionalProduct = productRepository.findById(id); 
-		if (optionalProduct.isEmpty()) {
+		if (!optionalProduct.isPresent()) {
 			throw new ProductNotFoundException();
 		}
 		return optionalProduct.get();
