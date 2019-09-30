@@ -11,6 +11,7 @@ public class ProductApplicationTests {
 
 	@Test
 	public void contextLoads() {
+	    ProductApplication.main(new String[] {});
 	}
 
 }
